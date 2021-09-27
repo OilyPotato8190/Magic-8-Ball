@@ -11,14 +11,15 @@ function answer() {
     // Pick Random Answer
     let randNum = Math.random()
     // To Lower Case
-    questionInEl.value.toUpperCase()
-    console.log(questionInEl.value)
-    if (questionInEl.value.length === 0) {
+    let question = questionInEl.value.toLowerCase()
+    if (question.length === 0) {
         answerEl.innerHTML = "Please ask a question..."
-    } else if (questionInEl.value === "does a magic 8 ball actually work?") {
+    } else if (question === "does a magic 8 ball actually work?" || question === "does a magic 8 ball actually work") {
         answerEl.innerHTML = "How dare you doubt me!"
-    } else if (questionInEl.value === "is javascript awesome?") {
+    } else if (question === "is javascript awesome?" || question === "is javascript awesome") {
         answerEl.innerHTML = "Of course!"
+    } else if (question === "will you be my friend?" || question === "will you be my friend") {
+        answerEl.innerHTML = "Perhaps"
     } else if (randNum < 0.2) {
             answerEl.innerHTML = "Without a Doubt."
     } else if (randNum < 0.4) {
@@ -29,5 +30,5 @@ function answer() {
             answerEl.innerHTML = "Don't count on it."
     } else {
             answerEl.innerHTML = "Outlook not so good."
-    }
+        }
 }
